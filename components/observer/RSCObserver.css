@@ -1,0 +1,18 @@
+.RscObserverWindow {
+    float:right;
+    width:35vw;
+    height:95vh;
+    border:1px solid black;
+    background-color: white;
+    overflow:auto;
+}
+.RscObserverWindow ~ * {
+    float:left;
+    width:55vw;
+}
+.RscObserverWindow .entry {
+    white-space: nowrap;
+}
+.RscObserverWindow .inserted {
+    outline: none !important;
+}
