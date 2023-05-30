@@ -13,7 +13,10 @@ div.box {
     font-weight:normal;
     margin:0;
 }
-span {
+.page-info a {
+    margin-left:10px;
+}
+span.timer {
     border:1px solid #333;
     background-color:#eee;
     color:red;

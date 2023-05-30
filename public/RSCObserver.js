@@ -71,7 +71,7 @@ function parseStreamingLine(line) {
   try {
     let [match,id,type,json] = line.match(/^([^:]+):([^{["]*)(.*)/)
     let vdom = JSON.parse(json);
-    dispatchRSCEvent('stream',{id,type,vdom});
+    dispatchRSCEvent('stream',{id,type,vdom,raw:line});
   } catch(e) {}
 }
 

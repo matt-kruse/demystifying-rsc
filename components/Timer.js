@@ -9,7 +9,7 @@ function Timer() {
     },1000);
   })
   return (
-      <span>{counter}</span>
+      <span className={"timer"}>{counter}</span>
   )
 }
 

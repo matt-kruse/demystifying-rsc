@@ -1,12 +1,9 @@
 import './style.css';
 import PageInfo from "@/components/PageInfo";
-import Link from "@/components/next/Link";
 import Script from "next/script";
-import ObserverWindow from "@/components/observer/RSCObserver";
 
 export const metadata = {
-  title: 'Next SPA',
-  description: 'This is a static SPA generated from NextJS 13.3 /app dir',
+  title: 'Demystifying React Server Components in NextJS 13 /app'
 }
 
 export default function RootLayout({ children }) {
@@ -14,16 +11,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* This is vanilla js loaded early to watch for DOM changes before Next/React even runs */}
+        {/* This is vanilla js loaded early to watch for native events before Next/React even runs */}
         <Script id="watcher" src="/RSCObserver.js" strategy={'beforeInteractive'}></Script>
       </head>
       <body>
-        <ObserverWindow></ObserverWindow>
-        <div className={"box"}>
-          <PageInfo filename="/layout.js"/>
+          <PageInfo filename="/layout.js" timer={false} linkPath={"/"} linkText={"[Home]"}/>
           {children}
-          <div><Link href={"/"}>Back to /</Link></div>
-        </div>
       </body>
     </html>
   )
