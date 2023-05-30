@@ -1,6 +1,6 @@
 'use client'
 export function rawEvents(event) {
-  return event.type===''? event.raw : null;
+  return event.raw;
 }
 export function virtualDom(event) {
   if (/view the source/.test(event.raw)) {
