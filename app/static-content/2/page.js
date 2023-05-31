@@ -21,7 +21,7 @@ export default ()=><>
       <li>The exact format has been seen to change between React canary releases, so it's a moving target.</li>
       <li>Lines can contain references to other lines by using $ID in their content</li>
       <li>This format is considered "internal" to React and is not meant for human consumption. You do not need to know how it works to make apps with RSC. But it's useful to see what is happening behind the scenes.</li>
-      <li>The <a href="https://rsc-parser.vercel.app/" target="_blank">RSC Parser</a> is a tool built by someone else that explores this format.</li>
+      <li>The <a href="https://rsc-parser.vercel.app/" target="_blank">RSC Parser</a> is a tool built by Alvar Lagerlöf that explores this format.</li>
     </ul>
 
   <h3>Virtual DOM Detailed View</h3>
@@ -33,6 +33,6 @@ export default ()=><>
   <p>When the page loads, React does a reconciliation between the Virtual DOM that it thinks represents the page, and the actual static DOM that the server returned. If any differences are found, it throws a console error. This is because it won't be able to accurately update the DOM if it doesn't have the correct structure representation.</p>
 
   <p>
-    <a href={"/client-components/"}>Next: Integrating Client Components</a>
+    <a className={"button"} href={"/client-components/"}>Next: Integrating Client Components</a>
   </p>
 </>

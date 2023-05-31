@@ -34,3 +34,11 @@ span.timer {
 .contentChanged > * {
     color:initial;
 }
+a.button {
+    background-color: #618c45;
+    color: white;
+    border:1px solid #333;
+    border-radius:5px;
+    padding:2px 10px;
+    display:inline-block;
+}

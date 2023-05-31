@@ -7,18 +7,8 @@ export default function Home() {
     <h1>Demystifying React Server Components in NextJS 13 /app</h1>
     <p>This purpose of this application is to demonstrate the concepts and code of React Server Components in NextJS13 in a way that exposes what is really happening.</p>
     <p><b>Audience:</b> Experienced React developers who are perhaps new to RSC. Or people using RSC who want to understand more about how it works.</p>
-    <p><i>(This page is a lot of up-front intro content to get it out of the way! I encourage you to read it, but you can <a href={"/static-content/"}>skip forward</a> if you want to)</i></p>
-    <h2>Important Notes</h2>
-    <ol>
-      <li>The code used in this app is <b>intentionally plain and simple</b> (I do not use Typescript or Tailwind, for example) so the concepts being demonstrated are not obfuscated by tooling.</li>
-      <li>Although the RSC concepts are general, this app focuses on implementation in <b>NextJS 13 /app directory.</b></li>
-      <li>This is not an exhaustive demonstration of all RSC capabilities or implementation. I'm focusing on the things that may be confusing or misunderstood.</li>
-      <li>Boxes like <div className={"box"}>this<div className={"box"}>and this</div></div> are used to show how the layout of pages are constructed and layered.</li>
-      <li>Details about where content comes from are usually shown at the top of each content area, like the top of this screen. It is in the format [file path] [timer?] [generated datestamp] [link?]</li>
-      <li>Timers like this: <Timer/> are shown on most content headers to demonstrate that content is persisting and not being regenerated.</li>
-      <li>When new elements are inserted into the page, they get a temporary <span className={"inserted"}>red outline</span>. When content is changed client-side, it is temporarily turned <span className={"contentChanged"}>red</span>. This is so you can easily visualize what part of the page is being updated dynamically.</li>
-      <li>You should install this app locally and play with the code and watch what happens! This is the best way to cement the ideas into your mind.</li>
-    </ol>
+    <p><i>(This page is a lot of up-front intro content to get it out of the way! I encourage you to read it, but you can <a className={"button"} href={"/static-content/"}>skip forward</a> if you want to)</i></p>
+
     <h2>Key Concepts</h2>
     <ol>
       <li>The term "React Server Components" (RSC) is used in two ways:
@@ -38,5 +28,19 @@ export default function Home() {
       </li>
       <li><b>SSG is the default</b> time when React code gets executed in RSC! There are ways in which you can force code to run as SSR or CSR instead.</li>
     </ol>
+
+    <h2>Important Notes About This App</h2>
+    <ol>
+      <li>The code used in this app is <b>intentionally plain and simple</b> (I do not use Typescript or Tailwind, for example) so the concepts being demonstrated are not obfuscated by tooling.</li>
+      <li>Although the RSC concepts are general, this app focuses on implementation in <b>NextJS 13 /app directory.</b></li>
+      <li>This is not an exhaustive demonstration of all RSC capabilities or implementation. I'm focusing on the things that may be confusing or misunderstood.</li>
+      <li>Boxes like <div className={"box"}>this<div className={"box"}>and this</div></div> are used to show how the layout of pages are constructed and layered.</li>
+      <li>Details about where content comes from are usually shown at the top of each content area, like the top of this screen. It is in the format [file path] [timer?] [generated datestamp] [link?]</li>
+      <li>Timers like this: <Timer/> are shown on most content headers to demonstrate that content is persisting and not being regenerated.</li>
+      <li>When new elements are inserted into the page, they get a temporary <span className={"inserted"}>red outline</span>. When content is changed client-side, it is temporarily turned <span className={"contentChanged"}>red</span>. This is so you can easily visualize what part of the page is being updated dynamically.</li>
+      <li>You should install this app locally and play with the code and watch what happens! This is the best way to cement the ideas into your mind.</li>
+    </ol>
+
+    <a className={"button"} href={"/static-content/"}>Next: Static Content</a>
   </>;
 }

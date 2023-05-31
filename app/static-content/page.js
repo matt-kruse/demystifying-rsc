@@ -6,5 +6,5 @@ export default ()=><>
   <p><b>But wait... </b></p>
   <p>What is all that javascript at the bottom of the page?</p>
   <p>Why is so much javascript included when RSC generates html, and there are no javascript components on this page?</p>
-  <p>The <a href={"/static-content/2/"}>next page</a> explains why.</p>
+  <p>The <a className={"button"} href={"/static-content/2/"}>next page</a> explains why.</p>
 </>
