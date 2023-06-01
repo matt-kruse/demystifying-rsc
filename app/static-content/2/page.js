@@ -1,5 +1,5 @@
 import ObserverWindow from "@/components/observer/RSCObserver";
-import {rawEvents, virtualDom} from "./filter"
+import {rawEvents, virtualDom} from "@/components/observer/filter"
 
 export default ()=><>
   <p>If you view the source of this page, you'll see the javascript at the bottom contains this:</p>
