@@ -21,16 +21,16 @@ export default ()=><>
       <b>Error: Text content does not match server-rendered HTML.</b><br/>
       <b>Error: Hydration failed because the initial UI does not match what was rendered on the server.</b><br/>
       Remember that RSC generates both static content and a virtual DOM describing the DOM it generated. After the page loads, the actual DOM is compared to what RSC thinks it rendered.<br/>
-      This error is thrown because the client-side component has already rendered a different datestamp than was the server delivered. This confuses React and the warning is thrown because it doesn't know what happened.
+      This error is thrown because the client-side component has already rendered a different datestamp than what the server delivered. This confuses React and the warning is thrown because it doesn't know what happened.
     </li>
     <li>
       Why did everything on the screen flash with red borders?<br/>
       Because of the hydration error, React got confused and needed to reconcile the difference between the static content and its virtual DOM. It throws this error:<br/>
       <b>There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.</b><br/>
       Since the Virtual DOM that was also sent down contains all the static content as well as the client components, React decides to completely re-render the document from the Virtual DOM.<br/>
-      This is made obvious by the red outlines highlighting every new element that was inserted.
+      This is made obvious by the red outlines highlighting every new element that was inserted by React.
     </li>
   </ol>
 
-  <a className={"button"} href={"/client-components/no-ssr/"}>Next: Disabling SSR for Client Components</a>
+  <a className={"button"} href={"/client-components/no-ssr/"}>Disabling SSR for Client Components</a>
 </>

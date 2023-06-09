@@ -26,3 +26,24 @@ function ObserverWindow({inline=false,filter}) {
   </div>;
 }
 export default ObserverWindow;
+
+export function filterRawEvents(event) {
+  return event.raw;
+}
+
+export function filterVirtualDom(event) {
+  if (/view the source/.test(event.raw)) {
+    return JSON.stringify(event.vdom, null, 1);
+  }
+  return null;
+}
+
+export function filterClientComponent(event) {
+  if (/ClientComponent\.js/.test(event.raw)) {
+    return event.raw;
+  }
+  if (/initialTree/.test(event.raw)) {
+    return event.raw;
+  }
+  return null;
+}

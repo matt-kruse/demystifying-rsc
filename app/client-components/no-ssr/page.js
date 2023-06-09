@@ -1,8 +1,7 @@
 import ClientComponent from "./ClientComponent";
 import fs from 'fs';
 import path from 'path';
-import ObserverWindow from "@/components/observer/RSCObserver";
-import {ClientComponentFilter} from "@/components/observer/filter"
+import ObserverWindow, {filterClientComponent} from "@/components/observer/RSCObserver";
 
 const source = fs.readFileSync(path.join(process.cwd(),'/app/client-components/no-ssr/ClientComponent.js'),'utf-8');
 
@@ -36,8 +35,8 @@ export default ()=><>
   <p>The two lines below are part of the RSC output, and show that the Client Component is defined as an external include file, and how it is referenced in the Virtual DOM Tree.</p>
 
   <p>(More to do here)</p>
-  
-  <ObserverWindow inline={true} filter={ClientComponentFilter}/>
+
+  <ObserverWindow inline={true} filter={filterClientComponent}/>
 
   <p><a className={"button"} href={"/client-components/next-dynamic/"}>Next: Disabling SSR Server-Side</a></p>
 

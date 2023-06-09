@@ -1,9 +1,10 @@
-import ObserverWindow from "@/components/observer/RSCObserver";
-import {rawEvents, virtualDom} from "@/components/observer/filter"
+import ObserverWindow, {filterRawEvents, filterVirtualDom} from "@/components/observer/RSCObserver";
 
 export default ()=><>
+  <h2>Virtual DOM</h2>
+
   <p>If you view the source of this page, you'll see the javascript at the bottom contains this:</p>
-  <ObserverWindow inline={true} filter={rawEvents}/>
+  <ObserverWindow inline={true} filter={filterRawEvents}/>
   <p>This is React's new line-based internal data streaming format.</p>
   <h3>Why is it needed?</h3>
   <ul>
@@ -27,12 +28,12 @@ export default ()=><>
   <h3>Virtual DOM Detailed View</h3>
   <p>This is React's internal representation of the current page/DOM structure. If it needs to update the page, it can compare what it wants with what it knows is there, and perform an efficient update to the DOM.</p>
   <p>You can see all the visible content on this page within this Virtual DOM.</p>
-  <ObserverWindow inline={true} filter={virtualDom}/>
+  <ObserverWindow inline={true} filter={filterVirtualDom}/>
 
   <h3>Virtual DOM Reconciliation</h3>
   <p>When the page loads, React does a reconciliation between the Virtual DOM that it thinks represents the page, and the actual static DOM that the server returned. If any differences are found, it throws a console error. This is because it won't be able to accurately update the DOM if it doesn't have the correct structure representation.</p>
 
   <p>
-    <a className={"button"} href={"/client-components/"}>Next: Integrating Client Components</a>
+    <a className={"button"} href={"/client-components/"}>Integrating Client Components</a>
   </p>
 </>

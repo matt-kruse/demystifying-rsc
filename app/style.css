@@ -42,6 +42,16 @@ a.button {
     padding:2px 10px;
     display:inline-block;
     text-decoration: none;
+    cursor: pointer;
+}
+a.button:hover {
+    text-decoration: underline;
+}
+a.button:before {
+    content:'Next: ';
+}
+a.button:after {
+    content:' > '
 }
 ul li, ol li {
     margin:5px 0;
