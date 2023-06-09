@@ -32,7 +32,7 @@ export function filterRawEvents(event) {
 }
 
 export function filterVirtualDom(event) {
-  if (/view the source/.test(event.raw)) {
+  if (/view source/i.test(event.raw)) {
     return JSON.stringify(event.vdom, null, 1);
   }
   return null;

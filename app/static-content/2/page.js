@@ -3,7 +3,7 @@ import ObserverWindow, {filterRawEvents, filterVirtualDom} from "@/components/ob
 export default ()=><>
   <h2>Virtual DOM</h2>
 
-  <p>If you view the source of this page, you'll see the javascript at the bottom contains this:</p>
+  <p>If you <a href="/view-source/static-content/2/" className="view-source" target="_blank">View Source</a> of this page, you'll see the javascript at the bottom contains this:</p>
   <ObserverWindow inline={true} filter={filterRawEvents}/>
   <p>This is React's new line-based internal data streaming format.</p>
   <h3>Why is it needed?</h3>
