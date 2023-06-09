@@ -14,15 +14,12 @@ export default function Home() {
 
     <h3>Contents</h3>
     <ol>
-      <li><a href="/notes/">Notes</a></li>
+      <li><a href="/notes/">Important Notes</a></li>
       <li><a href="/static-content/">Static Content</a></li>
       <li><a href="/static-content/2/">Virtual DOM</a></li>
       <li><a href="/client-components/">Integrating Client Components</a></li>
       <li><a href="/client-components/no-ssr/">Disabling SSR for Client Components</a></li>
-      <li><a href="/notes/">Notes</a></li>
-      <li><a href="/notes/">Notes</a></li>
-      <li><a href="/notes/">Notes</a></li>
-      <li><a href="/notes/">Notes</a></li>
+      <li>(More to come...)</li>
     </ol>
 
   </>;

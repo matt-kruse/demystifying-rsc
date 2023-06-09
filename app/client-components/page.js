@@ -5,7 +5,7 @@ export default ()=><>
     <p>This text is generated server-side.</p>
     <ClientComponent/>
   </blockquote>
-  <p>If you <b>view source</b> on this page, you'll see both of the text blocks above as generated html.</p>
+  <p>If you <a href="/view-source/client-components/?highlight=generated server-side||generated client-side" className="view-source" target="_blank">view source</a> on this page, you'll see both of the text blocks above as generated html.</p>
   <p>But there are several things we need to address on this simple page:</p>
   <ol>
     <li>
