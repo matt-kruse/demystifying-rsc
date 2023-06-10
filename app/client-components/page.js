@@ -1,36 +1,31 @@
 import ClientComponent from "./ClientComponent";
+import ViewSource from "@/components/ViewSource";
+import ObserverWindow, {filterRawEvents, filterVirtualDomForClientComponent} from "@/components/observer/RSCObserver";
+import FileSource from "@/components/FileSource";
 
 export default ()=><>
-  <blockquote>
-    <p>This text is generated server-side.</p>
-    <ClientComponent/>
-  </blockquote>
-  <p>If you <a href="/view-source/client-components/?highlight=generated server-side||generated client-side" className="view-source" target="_blank">view source</a> on this page, you'll see both of the text blocks above as generated html.</p>
-  <p>But there are several things we need to address on this simple page:</p>
-  <ol>
-    <li>
-      How/why did the client component generate static html content delivered in the response?<br/>
-      Because <b>client-components are pre-rendered on the server</b>. This is <b>SSR</b>. There are ways to control this, but by default client components will pre-render on the server at the time of request.
-    </li>
-    <li>
-      Why is the client component datestamp different in the source vs what I see on the screen?<br/>
-      Because the component rendered on the server, the output was delivered, and then it was re-rendered in the browser and updated. This process is called <b>hydration</b>.
-    </li>
-    <li>
-      Why did React throw an error in the browser console?<br/>
-      <b>Error: Text content does not match server-rendered HTML.</b><br/>
-      <b>Error: Hydration failed because the initial UI does not match what was rendered on the server.</b><br/>
-      Remember that RSC generates both static content and a virtual DOM describing the DOM it generated. After the page loads, the actual DOM is compared to what RSC thinks it rendered.<br/>
-      This error is thrown because the client-side component has already rendered a different datestamp than what the server delivered. This confuses React and the warning is thrown because it doesn't know what happened.
-    </li>
-    <li>
-      Why did everything on the screen flash with red borders?<br/>
-      Because of the hydration error, React got confused and needed to reconcile the difference between the static content and its virtual DOM. It throws this error:<br/>
-      <b>There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.</b><br/>
-      Since the Virtual DOM that was also sent down contains all the static content as well as the client components, React decides to completely re-render the document from the Virtual DOM.<br/>
-      This is made obvious by the red outlines highlighting every new element that was inserted by React.
-    </li>
-  </ol>
+  <h2>Client Components</h2>
+  <p>If components require interactivity or hooks like useState, or are basically any "typical" React component, then they expect to run in the browser, not on the server.</p>
+  <p>The default with RSC is to treat components as server components, and you must opt into treating them as client components that run in the browser.</p>
+  <p>This differs with the previous /pages directory in NextJS, for example, which defaulted to client components and you opted into treating something as a server component by defining a getServerProps() method etc.</p>
 
-  <a className={"button"} href={"/client-components/no-ssr/"}>Disabling SSR for Client Components</a>
+  <h3>Example Client Component Output</h3>
+  <ClientComponent/>
+
+  <h3>Client Component Source</h3>
+  <FileSource filepath={"/app/client-components/ClientComponent.js"}/>
+
+  <p>This component was delivered as javascript to the browser, where it ran, generated html, and then that html was inserted into the DOM.</p>
+
+  <p>But if you <ViewSource highlight={"Client Component HTML"}/> you will see that static html was returned from this client component. Why?</p>
+  <p>Because by default, client components are pre-rendered on the server, and their html is included in the static output. This is called SSR and has been around for a while. It's different than RSC.</p>
+  <p>If you look in your browser console, you will see a log statement showing that the client component DID run.</p>
+  <p>So let's dissect what just happened.</p>
+
+  <p>(More to do here...)</p>
+  <ObserverWindow inline={true} filter={filterRawEvents}/>
+
+
+
+  <a className={"button"} href={"/client-components/hydration-failed/"}>Hydration Failure</a>
 </>

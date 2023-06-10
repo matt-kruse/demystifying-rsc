@@ -1,9 +1,10 @@
 import ObserverWindow, {filterRawEvents, filterVirtualDom} from "@/components/observer/RSCObserver";
+import ViewSource from "@/components/ViewSource";
 
 export default ()=><>
   <h2>Virtual DOM</h2>
 
-  <p>If you <a href="/view-source/static-content/2/" className="view-source" target="_blank">View Source</a> of this page, you'll see the javascript at the bottom contains script tags that contain an encoded form of this content:</p>
+  <p>If you <ViewSource/> of this page, you'll see the javascript at the bottom contains script tags that contain an encoded form of this content:</p>
   <ObserverWindow inline={true} filter={filterRawEvents}/>
   <p>This is React's new line-based internal data streaming format.</p>
   <p>The content is pushed into an array to be processed and split by newlines, which results in the content above, which is the raw React streaming data format.</p>

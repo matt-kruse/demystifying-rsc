@@ -1,6 +1,5 @@
 'use client'
 export default ()=>{
-  return <div className={"client-component"}>
-    This content is generated client-side. Datestamp: {Date.now()}
-  </div>
+  console.log('Running client component');
+  return <div className={"client-component"}>Client Component HTML</div>
 }

@@ -47,3 +47,10 @@ export function filterClientComponent(event) {
   }
   return null;
 }
+
+export function filterVirtualDomForClientComponent(event) {
+  if (/Client Component HTML/i.test(event.raw)) {
+    return JSON.stringify(event.vdom, null, 1);
+  }
+  return null;
+}

@@ -1,14 +1,11 @@
 import ClientComponent from "./ClientComponent";
-import fs from 'fs';
-import path from 'path';
 import ObserverWindow, {filterClientComponent} from "@/components/observer/RSCObserver";
-
-const source = fs.readFileSync(path.join(process.cwd(),'/app/client-components/no-ssr/ClientComponent.js'),'utf-8');
+import FileSource from "@/components/FileSource";
 
 export default ()=><>
   <ClientComponent/>
   <p>The above component is a client component that does not trigger the hydration errors. The source code is below:</p>
-  <pre className={"code"}>{source}</pre>
+  <FileSource filepath={"/app/client-components/no-ssr/ClientComponent.js"}/>
 
   <h3>Key Points:</h3>
   <ol>
