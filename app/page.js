@@ -4,7 +4,7 @@ import Timer from "@/components/Timer";
 
 export default function Home() {
   return <>
-    <h1>Demystifying React Server Components in NextJS 13 /app</h1>
+    <h1>Demystifying React Server Components with NextJS 13 App Router</h1>
     <p>This purpose of this application is to demonstrate the concepts and code of React Server Components in NextJS13 in a way that exposes what is really happening.</p>
     <p><b>Audience:</b> Experienced React developers who are perhaps new to RSC. Or people using RSC who want to understand more about how it works.</p>
 
@@ -27,10 +27,14 @@ export default function Home() {
       <li>async Server Components</li>
       <li>Streaming with Server-Side Suspense</li>
       <li>Dynamically Updating Server-Rendered Content</li>
+      <li>RSC Caching</li>
+      <li>Server Functions?</li>
       <li>RSC FAQs</li>
       <li>
         <a href="/app-router/">App Router Demos</a> (These are very much a WIP, converting and improving from an old demo)
         <ul>
+          <li>Layout Nesting</li>
+          <li>Client-Side Routing</li>
           <li><a href="/app-router/products/">Dynamic Routes</a></li>
           <li><a href="/app-router/parallel-routes/">Parallel Routes</a></li>
           <li><a href="/app-router/router-refresh/">Router Refresh</a></li>

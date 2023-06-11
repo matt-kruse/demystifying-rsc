@@ -4,7 +4,7 @@ import Script from "next/script";
 import "@fontsource/jetbrains-mono";
 
 export const metadata = {
-  title: 'Demystifying React Server Components in NextJS 13 /app'
+  title: 'Demystifying React Server Components with NextJS 13 App Router'
 }
 
 export default function RootLayout({ children }) {
