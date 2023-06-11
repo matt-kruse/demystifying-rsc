@@ -95,6 +95,13 @@ pre.code {
     padding:5px;
     overflow:auto;
 }
+.file-source-title {
+    color:#999;
+    font-style: italic;
+}
+.file-source-title ~ pre.code {
+    margin-top:0;
+}
 code {
     white-space: pre;
     display:block;

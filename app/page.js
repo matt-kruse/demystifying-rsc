@@ -20,7 +20,7 @@ export default function Home() {
       <li><a href="/client-components/">Integrating Client Components</a></li>
       <li><a href="/client-components/hydration-failed/">Hydration Failure</a></li>
       <li><a href="/client-components/no-ssr/">Disabling SSR for Client Components</a></li>
-      <li>Disabling SSR Server-Side</li>
+      <li><a href="/client-components/next-dynamic/">Disabling Component SSR Server-Side</a></li>
       <li>Client Component Details</li>
       <li>Server Components as children of Client Components</li>
       <li>Server Components as props of Client Components</li>
