@@ -4,7 +4,8 @@ import Script from "next/script";
 import "@fontsource/jetbrains-mono";
 
 export const metadata = {
-  title: 'Demystifying React Server Components with NextJS 13 App Router'
+  title: 'Demystifying React Server Components with NextJS 13 App Router',
+  description: 'Understand RSC by digging into the details of how it really works'
 }
 
 export default function RootLayout({ children }) {

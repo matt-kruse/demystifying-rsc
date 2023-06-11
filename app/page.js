@@ -4,7 +4,7 @@ import Timer from "@/components/Timer";
 
 export default function Home() {
   return <>
-    <h1>Demystifying React Server Components with NextJS 13 App Router</h1>
+    <h1><img src={"/rsc.png"} className={"logo"}/>Demystifying React Server Components<br/>with NextJS 13 App Router</h1>
     <p>This purpose of this application is to demonstrate the concepts and code of React Server Components in NextJS13 in a way that exposes what is really happening.</p>
     <p><b>Audience:</b> Experienced React developers who are perhaps new to RSC. Or people using RSC who want to understand more about how it works.</p>
 
