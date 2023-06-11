@@ -1,6 +1,7 @@
 import ClientComponent from "./ClientComponent";
 import ViewSource from "@/components/ViewSource";
 import ObserverWindow, {
+  filterRawEvents,
   filterVirtualDomForClientComponent,
   filterVirtualDomForClientComponentLimited
 } from "@/components/observer/RSCObserver";
@@ -54,4 +55,8 @@ export default ()=><>
   <p>But they aren't <b>always</b> the same...</p>
 
   <a className={"button"} href={"/client-components/hydration-failed/"}>Hydration Failure</a>
+
+  <p>debug</p>
+  <ObserverWindow inline={true} filter={filterRawEvents}/>
+
 </>
