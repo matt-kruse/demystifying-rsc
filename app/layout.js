@@ -1,6 +1,7 @@
 import './style.css';
 import PageInfo from "@/components/PageInfo";
 import Script from "next/script";
+import "@fontsource/jetbrains-mono";
 
 export const metadata = {
   title: 'Demystifying React Server Components in NextJS 13 /app'
