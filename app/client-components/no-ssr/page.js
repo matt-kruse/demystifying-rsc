@@ -32,8 +32,6 @@ export default ()=><>
     <li>'use client' does not disable SSR!</li>
   </ul>
 
-  <p>The two lines below are part of the RSC output, and show that the Client Component is defined as an external include file, and how it is referenced in the Virtual DOM Tree.</p>
-
   <p>But what if a reusable Client Component doesn't do this itself, and causes hydration errors because of SSR?</p>
 
   <p><a className={"button"} href={"/client-components/next-dynamic/"}>Disabling Component SSR Server-Side</a></p>
