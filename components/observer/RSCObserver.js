@@ -49,11 +49,11 @@ export function filterClientComponent(event) {
 }
 
 export function filterVirtualDomForClientComponent(event) {
-  return (/Client Component HTML|ClientComponent\.js/i.test(event.raw)) ? event.raw : null;
+  return (/Client Component HTML|"ClientComponent"/.test(event.raw)) ? event.raw : null;
 }
 
 export function filterVirtualDomForClientComponentLimited(event) {
-  if (/ClientComponent\.js/i.test(event.raw)) {
+  if (/"ClientComponent"/.test(event.raw)) {
     return event.raw
   }
   if (/Client Component HTML/.test(event.raw)) {
