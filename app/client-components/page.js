@@ -11,7 +11,7 @@ export default ()=><>
   <h2>Client Components</h2>
   <p>If components require interactivity or hooks like useState, or are basically any "typical" React component, then they expect to run in the browser, not on the server.</p>
   <p>The default with RSC is to treat components as server components, and you must opt into treating them as client components that run in the browser.</p>
-  <p>This differs with the previous /pages directory in NextJS, for example, which defaulted to client components and you opted into treating something as a server component by defining a getServerProps() method etc.</p>
+  <p>This differs with the previous /pages directory in NextJS, for example, where everything is a client component and you opted into server-side behavior by defining a getServerProps() method etc to control SSR.</p>
 
   <h3>Example Client Component Output</h3>
   <ClientComponent/>

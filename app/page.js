@@ -8,7 +8,7 @@ export default function Home() {
     <p>This purpose of this application is to demonstrate the concepts and code of React Server Components in NextJS13 in a way that exposes what is really happening.</p>
     <p><b>Audience:</b> Experienced React developers who are perhaps new to RSC. Or people using RSC who want to understand more about how it works.</p>
 
-    <p>This app is intended to be stepped through linearly, but you may jump to any page below.</p>
+    <p>This tutorial is intended to be stepped through linearly, but you may jump to any page below.</p>
 
     <p><a className={"button"} href={"/notes/"}>Important Notes</a></p>
 
@@ -20,7 +20,14 @@ export default function Home() {
       <li><a href="/client-components/">Integrating Client Components</a></li>
       <li><a href="/client-components/hydration-failed/">Hydration Failure</a></li>
       <li><a href="/client-components/no-ssr/">Disabling SSR for Client Components</a></li>
-      <li>(Much more RSC content to come...)</li>
+      <li>Disabling SSR Server-Side</li>
+      <li>Client Component Details</li>
+      <li>Server Components as children of Client Components</li>
+      <li>Server Components as props of Client Components</li>
+      <li>async Server Components</li>
+      <li>Streaming with Server-Side Suspense</li>
+      <li>Dynamically Updating Server-Rendered Content</li>
+      <li>RSC FAQs</li>
       <li>
         <a href="/app-router/">App Router Demos</a> (These are very much a WIP, converting and improving from an old demo)
         <ul>

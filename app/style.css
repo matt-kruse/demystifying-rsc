@@ -1,6 +1,19 @@
+html {
+    background-color:#666;
+}
 body {
     font-family:monospace;
-    padding:5px 5px 100px 5px;
+    padding:15px 20px 100px 20px;
+    max-width:1000px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#fcfcfc;
+    border:1px solid #666;
+    font-size:110%;
+    line-height:1.25em;
+}
+img {
+    max-width:90%;
 }
 div.box {
     margin: 5px;
@@ -37,9 +50,9 @@ span.timer {
 a.button {
     background-color: #618c45;
     color: white;
-    border:1px solid #333;
+    outline:1px solid #333;
     border-radius:5px;
-    padding:2px 10px;
+    padding:0 10px;
     display:inline-block;
     text-decoration: none;
     cursor: pointer;
@@ -55,18 +68,17 @@ a.button:after {
 }
 a.view-source {
     background-color: #b4e1ee;
-    border:1px solid #333;
+    outline:1px solid #333;
     color:black;
     border-radius:5px;
-    padding:2px 10px;
+    padding:0 7px;
     display:inline-block;
     text-decoration: none;
     cursor: pointer;
-    font-weight:bold;
 }
 a.view-source:after {
     content: "\1F855";
-    padding-left:5px;
+    padding-left:3px;
 }
 ul li, ol li {
     margin:5px 0;
@@ -75,6 +87,7 @@ pre.code {
     border:1px solid #333;
     background-color: #eee;
     padding:5px;
+    overflow:auto;
 }
 code {
     white-space: pre;
