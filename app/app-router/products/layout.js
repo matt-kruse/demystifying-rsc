@@ -1,11 +1,10 @@
-import Timer from "@/components/Timer";
 import PageInfo from "@/components/PageInfo";
 
 export default function Layout({ children }) {
-  console.log("SSR: Running /router-refresh/layout.js");
+  console.log("SSR: Running /app-router/products/layout.js");
   return (
       <div className={"box"}>
-        <PageInfo filename="/router-refresh/layout.js"/>
+        <PageInfo filename="/app-router/products/layout.js"/>
         {children}
       </div>
   )

@@ -22,7 +22,7 @@ async function Delay2() {
 export default function Page() {
   return (
       <div className={"box"}>
-        <PageInfo filename="/server-delay/page.js"/>
+        <PageInfo filename="/app-router/server-delay/page.js"/>
         <div>This shows how nested RSCs with delays will waterfall</div>
         <div>This is Date.now() of the first component</div>
         <Delay1>

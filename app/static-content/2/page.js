@@ -36,7 +36,7 @@ export default ()=><>
   <ObserverWindow inline={true} filter={filterVirtualDom}/>
 
   <h3>Virtual DOM Reconciliation</h3>
-  <p>When the page loads, React does a reconciliation between the Virtual DOM that it thinks represents the page, and the actual static DOM that the server returned. If any differences are found, it throws a console error. This is because it won't be able to accurately update the DOM if it doesn't have the correct structure representation.</p>
+  <p>When the page loads, React does a reconciliation between the Virtual DOM that it thinks represents the page, and the actual static DOM that the server returned. If any differences are found, it throws a console error. This is because it won't be able to accurately update the DOM if it doesn't have the correct structure representation. We will explore why this could happen in just a bit.</p>
   <p><img src={"/mental-model-3.png"}/></p>
   <p>
     <a className={"button"} href={"/client-components/"}>Integrating Client Components</a>

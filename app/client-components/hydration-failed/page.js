@@ -2,6 +2,7 @@ import ClientComponent from "./ClientComponent";
 import ViewSource from "@/components/ViewSource";
 
 export default ()=><>
+  <h2>Hydration Failure</h2>
   <blockquote>
     <p>This text is generated server-side.</p>
     <ClientComponent/>

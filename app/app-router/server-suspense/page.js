@@ -23,7 +23,7 @@ async function Delay2() {
 export default function Page() {
   return (
       <div className={"box"}>
-        <PageInfo filename="server-suspense/page.js"/>
+        <PageInfo filename="/app-router/server-suspense/page.js"/>
         <div>This shows how nested RSCs with Suspense will stream in. Both components wait until the outer Suspense is resolved.</div>
         <Suspense fallback={"Loading both components (6 seconds)..."}>
           <div>This is Date.now() of the outer component</div>

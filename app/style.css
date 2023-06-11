@@ -76,7 +76,15 @@ pre.code {
     background-color: #eee;
     padding:5px;
 }
+code {
+    white-space: pre;
+    display:block;
+}
 .client-component {
     background-color: #a2e3f6;
     border:1px solid black;
+}
+.highlight {
+    background-color:yellow;
+    font-weight:bold;
 }

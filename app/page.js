@@ -18,8 +18,19 @@ export default function Home() {
       <li><a href="/static-content/">Static Content</a></li>
       <li><a href="/static-content/2/">Virtual DOM</a></li>
       <li><a href="/client-components/">Integrating Client Components</a></li>
+      <li><a href="/client-components/hydration-failed/">Hydration Failure</a></li>
       <li><a href="/client-components/no-ssr/">Disabling SSR for Client Components</a></li>
-      <li>(More to come...)</li>
+      <li>(Much more RSC content to come...)</li>
+      <li>
+        <a href="/app-router/">App Router Demos</a> (These are very much a WIP, converting and improving from an old demo)
+        <ul>
+          <li><a href="/app-router/products/">Dynamic Routes</a></li>
+          <li><a href="/app-router/parallel-routes/">Parallel Routes</a></li>
+          <li><a href="/app-router/router-refresh/">Router Refresh</a></li>
+          <li><a href="/app-router/server-delay/">Server Delay</a></li>
+          <li><a href="/app-router/server-suspense/">Server Suspense</a></li>
+        </ul>
+      </li>
     </ol>
 
   </>;
