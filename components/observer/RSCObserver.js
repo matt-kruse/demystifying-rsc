@@ -1,14 +1,40 @@
 'use client';
 import {useEffect, useState} from "react";
 import "./RSCObserver.css";
+import escape from "escape-html";
 
-function ObserverWindow({inline=false,filter,escapeHtml=true}) {
+function ObserverWindow({inline=false,filter,escapeHtml=true,highlight,find,replace="NO REPLACE SPECIFIED WITH FIND"}) {
   const [log,setLog] = useState([]);
   const addLog = function(event) {
     if (filter) {
-      event = filter(event);
+      if (typeof filter=="string") {
+        event = (new RegExp(filter)).test(event.raw) ? event.raw : null;
+      }
+      else {
+        event = filter(event);
+      }
+    }
+    // If regex is specified, only keep matched groups
+    if (event && find && replace) {
+      if (typeof event!="string") {
+        event = event.raw;
+      }
+      find = new RegExp(find,"g");
+      event = event.replaceAll(find,replace);
     }
     if (event) {
+      if (highlight) {
+        event = event.replaceAll(`highlight=${highlight}`, ``);
+        const highlights = highlight.split('||');
+        highlights.forEach(h => {
+          if (/^\/(.*)\/$/.test(h)) {
+            let exp = RegExp.$1;
+            exp = escape(exp);
+            h = new RegExp(exp, 'g');
+          }
+          event = event.replaceAll(h, `<span class="h">$&</span>`);
+        });
+      }
       setLog(currentLog => [...currentLog, event]);
     }
   }

@@ -13,6 +13,12 @@ export async function GET(request, {params}) {
     html = html.replaceAll(`highlight=${highlight}`,``);
     const highlights = highlight.split('||');
     highlights.forEach(h=>{
+      // Is highlight a regex?
+      if (/^\/(.*)\/$/.test(h)) {
+        let exp = RegExp.$1;
+        exp = escape(exp);
+        h = new RegExp(exp,'g');
+      }
       html = html.replaceAll(h,`<span class="h">$&</span>`);
     })
   }

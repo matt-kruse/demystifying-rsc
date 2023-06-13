@@ -95,6 +95,9 @@ pre.code {
     padding:5px;
     overflow:auto;
 }
+pre.code.wrap {
+    white-space: normal;
+}
 .file-source-title {
     color:#999;
     font-style: italic;
@@ -113,4 +116,13 @@ code {
 .highlight {
     background-color:yellow;
     font-weight:bold;
+}
+dt {
+    font-weight:bold;
+}
+dt:before {
+    content:"Q: ";
+}
+dd:before {
+    content:"A: ";
 }
