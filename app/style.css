@@ -21,7 +21,7 @@ img.logo {
     float:left;
     margin-right:25px;
 }
-div.box {
+.box {
     margin: 5px;
     border: 1px solid black;
     padding: 2px 10px;

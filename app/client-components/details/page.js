@@ -78,6 +78,6 @@ export default ()=><>
     <dd>Yes! We have already demonstrated it on this page! </dd>
   </dl>
 
-  <p><a className={"button"} href={"/client-components/server-children/"}>Server Components as children of Client Components</a></p>
+  <p><a className={"button"} href={"/client-components/server-children/"}>Server Components as Children of Client Components</a></p>
 
 </>
