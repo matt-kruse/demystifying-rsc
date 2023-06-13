@@ -14,7 +14,7 @@ export default ()=><>
   </ul>
   <p>These are significant changes and allow us to see more details about how Client Components really work. Let's dig in...</p>
   <p>Here are the relevant lines from the React Virtual DOM:</p>
-  <ObserverWindow filter={"\"NoSSR\"|react.suspense|fallback|ClientComponent"} find={"^([^:]*:).*?(\\[\"\\$\",\"\\$b\",null,{\"fallback\".*?]}]}]).*"} replace="$1 ... $2 ..." inline={true}/>
+  <ObserverWindow filter={"\"NoSSR\"|react.suspense|fallback|ClientComponent"} find={"^([^:]*:).*?(\\[\"\\$\",\"\\$.*?\",null,{\"fallback\".*?]}]}]).*"} replace="$1 ... $2 ..." inline={true}/>
 
   <p><i>(Because this is all dynamic, I cannot reference exact line labels or numbers, since they may change depending on the run-time environment and other factors. I will reference things generally.)</i></p>
   <p>The meaning of these 4 lines is:</p>
