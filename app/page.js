@@ -22,7 +22,7 @@ export default function Home() {
       <li><a href="/client-components/no-ssr/">Disabling SSR for Client Components</a></li>
       <li><a href="/client-components/next-dynamic/">Disabling Component SSR Server-Side</a></li>
       <li><a href="/client-components/details/">Client Component Details</a></li>
-      <li>Server Components as children of Client Components</li>
+      <li><a href="/client-components/server-children/">Server Components as Children of Client Components</a></li>
       <li>Server Components as props of Client Components</li>
       <li>async Server Components</li>
       <li>Streaming with Server-Side Suspense</li>
