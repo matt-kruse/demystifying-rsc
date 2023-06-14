@@ -56,6 +56,6 @@ export default ()=><>
   <h3>The One Rule To Remember</h3>
   <p>The deciding factor for what is treated as a Client Component is what is <b>imported</b> in the code, not how components are <b>nested</b> in the JSX.</p>
 
-  <p><a className={"button"} href={"/"}>async Server Components</a></p>
+  <p><a className={"button"} href={"/server-components/async/"}>async Server Components</a></p>
 
 </>
