@@ -2,6 +2,7 @@ import Delays from './Delays';
 import ObserverWindow, {filterClientComponent, filterRawEvents} from "@/components/observer/RSCObserver";
 import FileSource from "@/components/FileSource";
 import ViewSource from "@/components/ViewSource";
+export const dynamic='force-dynamic';
 
 export default ()=><>
   <h2>async Server Components</h2>
