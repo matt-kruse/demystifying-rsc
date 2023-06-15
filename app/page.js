@@ -38,8 +38,6 @@ export default function Home() {
           <li><a href="/app-router/products/">Dynamic Routes</a></li>
           <li><a href="/app-router/parallel-routes/">Parallel Routes</a></li>
           <li><a href="/app-router/router-refresh/">Router Refresh</a></li>
-          <li><a href="/app-router/server-delay/">Server Delay</a></li>
-          <li><a href="/app-router/server-suspense/">Server Suspense</a></li>
         </ul>
       </li>
     </ol>
