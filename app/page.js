@@ -25,7 +25,7 @@ export default function Home() {
       <li><a href="/client-components/server-children/">Server Components as Children of Client Components</a></li>
       <li><a href="/client-components/server-import/">Importing Server Components into Client Components</a></li>
       <li><a href="/server-components/async/">async Server Components</a></li>
-      <li>Streaming with Server-Side Suspense</li>
+      <li><a href="/server-components/streaming/">Streaming with Server-Side Suspense</a></li>
       <li>Dynamically Updating Server-Rendered Content</li>
       <li>RSC Caching</li>
       <li>Server Functions?</li>

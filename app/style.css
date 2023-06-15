@@ -98,6 +98,13 @@ pre.code {
 pre.code.wrap {
     white-space: normal;
 }
+pre.tight {
+    margin:0;
+}
+pre.gray {
+    color:#999;
+    font-style: italic;
+}
 .file-source-title {
     color:#999;
     font-style: italic;
@@ -125,4 +132,7 @@ dt:before {
 }
 dd:before {
     content:"A: ";
+}
+.overflow {
+    overflow:auto;
 }

@@ -3,23 +3,6 @@ import Link from "next/link";
 import {Suspense} from "react";
 import PageInfo from "@/components/PageInfo";
 
-async function Delay1({children}) {
-  return new Promise((resolve)=>{
-    setTimeout(()=>resolve(
-        <>
-          <div>{Date.now()}</div>
-          <div>{children}</div>
-        </>
-    ),1000);
-  });
-}
-
-async function Delay2() {
-  return new Promise((resolve)=>{
-    setTimeout(()=>resolve(Date.now()),1000);
-  });
-}
-
 export default function Page() {
   return (
       <div className={"box"}>

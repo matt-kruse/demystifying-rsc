@@ -43,11 +43,11 @@ window.fetch = async (...args) => {
 };
 
 // Functions to handle and process streamed RSC Data
-function captureStreamContent(data,isFetch) {
+function captureStreamContent(data,isDynamic) {
   if (!data) return;
   if (typeof data==="string") data=[data];
   try {
-    let lines = isFetch ? data : combineStreamingChunksIntoLines(data);
+    let lines = isDynamic ? data : combineStreamingChunksIntoLines(data);
     lines.forEach(line=>{
       parseStreamingLine(line)
     })
@@ -83,7 +83,6 @@ const targetNode = document.documentElement;
 const config = {characterData: true, characterDataOldValue: true, attributes: true, childList: true, subtree: true};
 const callback = (mutationList) => {
   for (const mutation of mutationList) {
-    // console.log(mutation);
     let target = null;
     if (mutation.type === 'characterData') {
       target = mutation?.target?.parentNode;
@@ -92,8 +91,21 @@ const callback = (mutationList) => {
     if (mutation.addedNodes) {
       for (const node of mutation.addedNodes) {
         target = node;
-        if (!node?.classList?.contains('ignore-inserted') && node?.tagName!=="NEXT-ROUTE-ANNOUNCER") {
-          // console.log(node.outerHTML);
+
+        if (node?.tagName==="SCRIPT" && !node.src) {
+          // Look for streaming content within the script tag
+          let src = node.textContent;
+          if (/^self\.__next_f\.push/.test(src)) {
+            dispatchRSCEvent('stream',{raw:node.textContent});
+          }
+          else {
+            dispatchRSCEvent('script',{raw:node.textContent});
+          }
+        }
+        else if (node && node.hidden) {
+          dispatchRSCEvent('suspense',{raw:node.outerHTML});
+        }
+        else if (!node?.classList?.contains('ignore-inserted') && node?.tagName!=="NEXT-ROUTE-ANNOUNCER") {
           node?.classList?.add('inserted');
         }
       }

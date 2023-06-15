@@ -1,4 +1,4 @@
-import Delay from "./Delay";
+import Delay from "../Delay";
 export default () => <>
   <Delay seconds={1}/>
   <Delay seconds={1}/>

@@ -8,7 +8,7 @@ export default ()=><>
   <p>Server Components can be async, so they return a Promise. When rendering, RSC will wait for all Promises to resolve before returning the html content or Virtual DOM back to the browser. This is what caused the delay in the delivery of the content of this page.</p>
 
   <p>Below you can see a simple &lt;Delay&gt; Server Component:</p>
-  <FileSource title={"Delay.js"} filepath={"/app/server-components/async/Delay.js"}/>
+  <FileSource title={"Delay.js"} filepath={"/app/server-components/Delay.js"}/>
   <p>This component creates a Promise that waits a certain number of seconds before resolving to a simple DIV with a timestamp showing when it rendered. If the component has children, they are then rendered.</p>
 
   <p>And below is the output of multiple instances of this Component, some nested and some not:</p>
@@ -29,6 +29,6 @@ export default ()=><>
   <p>you could return the available content as soon as possible to immediately show to the user, and then as each Promise resolves fill in its content where it's supposed to go?</p>
   <p>You can. This is called streaming, and it's one of the biggest benefits of React Server Components.</p>
 
-  <p><a className={"button"} href={"/"}>Streaming with Server-Side Suspense</a></p>
+  <p><a className={"button"} href={"/server-components/streaming/"}>Streaming with Server-Side Suspense</a></p>
 
 </>
