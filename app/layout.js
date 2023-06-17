@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  console.log("SSR: Running /layout.js");
+  // console.log("SSR: Running /layout.js");
   return (
     <html lang="en">
       <head>
