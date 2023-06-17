@@ -6,14 +6,15 @@ export const revalidate=0;
 import fs from 'fs';
 import path from 'path';
 
+console.log(`Running async`);
+console.log(__dirname);
+console.log(process.cwd());
+console.log(fs.readdirSync('.'));
+
 export default ()=>{
   // console.log("running page.js now")
   let source = '';
   let p = '';
-  console.log(`Running async`);
-  console.log(__dirname);
-  console.log(process.cwd());
-  console.log(fs.readdirSync('.'));
   try {
     let filepath = '../Delay.js';
     p = path.join(__dirname, filepath);
