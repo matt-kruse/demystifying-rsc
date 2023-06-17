@@ -3,6 +3,8 @@ import ObserverWindow, {filterClientComponent, filterRawEvents} from "@/componen
 import FileSource from "@/components/FileSource";
 import ViewSource from "@/components/ViewSource";
 export const revalidate=0;
+import fs from 'fs';
+import path from 'path';
 
 export default ()=>{
   // console.log("running page.js now")
