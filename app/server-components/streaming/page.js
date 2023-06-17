@@ -4,7 +4,7 @@ import ObserverWindow, {filterClientComponent, filterRawEvents} from "@/componen
 import FileSource from "@/components/FileSource";
 import ViewSource from "@/components/ViewSource";
 import StreamWatcher from "./StreamWatcher";
-export const dynamic='force-dynamic';
+export const revalidate=0;
 
 export default ()=><>
   <h2>Streaming with Server-Side Suspense</h2>
