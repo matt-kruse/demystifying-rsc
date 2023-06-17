@@ -9,9 +9,9 @@ export default function({filepath,title}) {
       <pre className={"code"}>{source}</pre>
     </>
   } catch(e) {
-    return <pre className={"code"}>Error loading {path.join(process.cwd(), filepath}
+    return <pre className={"code"}>Error loading {path.join(process.cwd(), filepath)}
 
-{e}
+{e.toString()}
     </pre>
   }
 }
