@@ -21,7 +21,7 @@ export default ()=>{
   return <>
     <h2>async Server Components</h2>
     <pre>{source}</pre>
-    <pre>p: {p} </pre>
+    <pre>p: {p}  </pre>
     <p>Server Components can be async, so they return a Promise. When rendering, RSC will wait for all Promises to resolve before returning the html content or Virtual DOM back to the browser. This is what caused the delay in the delivery of the content of this page.</p>
 
     <p>Below you can see a simple &lt;Delay&gt; Server Component:</p>
