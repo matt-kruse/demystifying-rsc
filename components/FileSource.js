@@ -11,6 +11,8 @@ export default function({filepath,title}) {
   } catch(e) {
     return <pre className={"code"}>Error loading {path.join(process.cwd(), filepath)}
 
+      dirname: {__dirname}
+
 {e.toString()}
     </pre>
   }
