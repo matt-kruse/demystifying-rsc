@@ -32,7 +32,16 @@ export default ()=>{
     <p>The nested components, however, have increasing timestamps. This is because the outer Delay resolved after 1 second. At that point, it rendered its children. Its child was another Delay component with a delay of 0.5 seconds. Once that time elapses, it renders and again calls its children to render. This is a third Delay component, with a delay of 0.5 seconds.</p>
     <p>The nested components demonstrate that waterfalls can be created in Server Components, where the inner components do not begin their async operations until their parent is actually rendered.</p>
     <p>Below is the code:</p>
-    <FileSource filepath={"/app/server-components/async/Delays.js"}/>
+    <FileSource>{'import Delay from "../Delay";\n' +
+        'export default () => <>\n' +
+        '  <Delay seconds={1}/>\n' +
+        '  <Delay seconds={1}/>\n' +
+        '  <Delay seconds={1}>\n' +
+        '    <Delay seconds={.5}>\n' +
+        '      <Delay seconds={.5}/>\n' +
+        '    </Delay>\n' +
+        '  </Delay>\n' +
+        '</>\n'}</FileSource>
     <p>If you <b>reload this page</b> you will see that it takes ~2 seconds to return its content.</p>
     <p>The outer Delay is 1s, its child is 0.5s, and its child is again 0.5s. The waterfall causes the whole page to wait a total of 2 seconds to return content.</p>
 
