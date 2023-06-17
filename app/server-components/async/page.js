@@ -9,16 +9,19 @@ import path from 'path';
 export default ()=>{
   // console.log("running page.js now")
   let source = '';
+  let p = '';
   try {
     let filepath = '../Delay.js';
-    source = fs.readFileSync(path.join(__dirname, filepath), 'utf-8');
+    p = path.join(__dirname, filepath);
+    source = fs.readFileSync(p, 'utf-8');
   }
   catch (e) {
     source = e.toString();
   }
   return <>
     <h2>async Server Components</h2>
-    {source}
+    <pre>{source}</pre>
+    <pre>{p}</pre>
     <p>Server Components can be async, so they return a Promise. When rendering, RSC will wait for all Promises to resolve before returning the html content or Virtual DOM back to the browser. This is what caused the delay in the delivery of the content of this page.</p>
 
     <p>Below you can see a simple &lt;Delay&gt; Server Component:</p>
