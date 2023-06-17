@@ -12,7 +12,18 @@ export default ()=>{
     <p>Server Components can be async, so they return a Promise. When rendering, RSC will wait for all Promises to resolve before returning the html content or Virtual DOM back to the browser. This is what caused the delay in the delivery of the content of this page.</p>
 
     <p>Below you can see a simple &lt;Delay&gt; Server Component:</p>
-    <FileSource title={"Delay.js"} filepath={"../../../public/Delay.js"}/>
+    <FileSource title={"Delay.js"}>
+{'export default async function Delay({seconds=1,children}) {\n' +
+    '  return new Promise((resolve)=>{\n' +
+    '    setTimeout(()=>resolve(\n' +
+    '        <div className={"box"}>\n' +
+    '          Render Timestamp: {Date.now()}\n' +
+    '          {children}\n' +
+    '        </div>\n' +
+    '    ),seconds*1000);\n' +
+    '  });\n' +
+    '}\n'}
+    </FileSource>
     <p>This component creates a Promise that waits a certain number of seconds before resolving to a simple DIV with a timestamp showing when it rendered. If the component has children, they are then rendered.</p>
 
     <p>And below is the output of multiple instances of this Component, some nested and some not:</p>
