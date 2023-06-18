@@ -1,14 +1,13 @@
 import {Suspense} from "react";
 import Delay from '../Delay';
-import ObserverWindow, {filterClientComponent, filterRawEvents} from "@/components/observer/RSCObserver";
-import FileSource from "@/components/FileSource";
-import ViewSource from "@/components/ViewSource";
 import StreamWatcher from "./StreamWatcher";
 export const revalidate=0;
 
 export default ()=><>
   <h2>Streaming with Server-Side Suspense</h2>
 
+  <p>NOTE: STREAMING IS BROKEN ON VERCEL WHEN DEPLOYED. THIS PAGE IS NOT A GOOD DEMO UNTIL I FIGURE OUT HOW TO FIX THIS!</p>
+  
   <p>It may take several reloads of this page to see what is happening!</p>
 
   <p>This box has two nested RSCs that each delay for 3 seconds, creating a waterfall. One &lt;suspense&gt; wraps them both, so it takes 6 seconds for all to resolve, and then they both appear.</p>
