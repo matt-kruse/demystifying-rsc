@@ -8,6 +8,7 @@ export default function Home() {
     <p>This purpose of this application is to demonstrate the concepts and code of React Server Components in NextJS13 in a way that exposes what is really happening.</p>
     <p><b>Audience:</b> Experienced React developers who are perhaps new to RSC. Or people using RSC who want to understand more about how it works.</p>
 
+    <p><a href={"https://github.com/matt-kruse/demystifying-rsc"} target={"_blank"}>Clone on GitHub</a>.</p>
     <p>This tutorial is intended to be stepped through linearly, but you may jump to any page below.</p>
 
     <p><a className={"button"} href={"/notes/"}>Important Notes</a></p>
