@@ -96,7 +96,12 @@ const callback = (mutationList) => {
           // Look for streaming content within the script tag
           let src = node.textContent;
           if (/^self\.__next_f\.push/.test(src)) {
-            dispatchRSCEvent('stream',{raw:node.textContent});
+            try {
+              let [_,json] = src.match(/^[^"]*(".*")/);
+              let streams = JSON.parse(json).split(/\n/);
+              streams.forEach(s=>dispatchRSCEvent('stream',{raw:s}));
+            }
+            catch(e) {}
           }
           else {
             dispatchRSCEvent('script',{raw:node.textContent});

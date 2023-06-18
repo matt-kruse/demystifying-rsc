@@ -33,10 +33,10 @@ export default function Home() {
       <li>
         <a href="/app-router/">App Router Demos</a> (These are very much a WIP, converting and improving from an old demo)
         <ul>
-          <li>Layout Nesting</li>
-          <li>Client-Side Routing</li>
-          <li><a href="/app-router/products/">Dynamic Routes</a></li>
-          <li><a href="/app-router/parallel-routes/">Parallel Routes</a></li>
+          <li><a href={"/app-router/nested/routing/"}>nested/routing/</a></li>
+          <li><a href={"/app-router/dynamic-routes/"}>[dynamic-routes]</a></li>
+          <li><a href={"/app-router/route-groups/"}>(route-groups)</a></li>
+          <li><a href={"/app-router/parallel-routes/"}>@parallel-routes</a></li>
           <li><a href="/app-router/router-refresh/">Router Refresh</a></li>
         </ul>
       </li>

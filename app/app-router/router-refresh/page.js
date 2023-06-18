@@ -1,7 +1,6 @@
-import Timer from "@/components/Timer";
 import RouterRefresh from "@/components/RouterRefresh";
-import Link from "@/components/next/Link";
 import PageInfo from "@/components/PageInfo";
+export const revalidate=0;
 
 export default function Home() {
   return (

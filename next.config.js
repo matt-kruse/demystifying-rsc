@@ -1,4 +1,5 @@
 const nextConfig = {
+  trailingSlash: true,
   experimental: {
     serverActions: true
   },
