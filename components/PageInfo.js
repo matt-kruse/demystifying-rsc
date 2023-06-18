@@ -11,7 +11,7 @@ const PageInfo = ({filename, timer=true, linkPath=null, linkText=null})=>{
     cache[filename] = now;
   }
   return <div className="page-info">
-    {filename} {timer?<Timer/>:null} @ {now()} {linkPath && linkText ? <Link href={linkPath}>{linkText}</Link> : null}
+    {filename} {timer?<Timer/>:null} @ {now} {linkPath && linkText ? <Link href={linkPath}>{linkText}</Link> : null}
   </div>
 }
 export default PageInfo;
