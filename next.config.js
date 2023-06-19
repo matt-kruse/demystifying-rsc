@@ -1,8 +1,4 @@
 const nextConfig = {
-  trailingSlash: true,
-  experimental: {
-    serverActions: true
-  },
+  trailingSlash: true
 }
-
 module.exports = nextConfig
