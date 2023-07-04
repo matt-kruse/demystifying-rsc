@@ -6,13 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update": "npm update --registry https://registry.npmjs.org"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.0.3",
     "escape-html": "^1.0.3",
     "eslint-config-next": "^13.3.0",
-    "next": "^13.4.8-canary.2",
+    "next": "^13.4.9-canary.1",
     "npm": "^9.7.1",
     "pretty": "^2.0.0",
     "react": "^18.2.0",
