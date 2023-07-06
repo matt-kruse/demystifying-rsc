@@ -1,6 +1,5 @@
 import {Suspense} from "react";
 export const dynamic='force-dynamic';
-import dynamic2 from "next/dynamic";
 import BufferDetector from "@/app/suspense-test/BufferDetector";
 
 async function Delay() {
@@ -10,7 +9,7 @@ async function Delay() {
 }
 export default async()=>{
   return <>
-    <p>Buffer: <BufferDetector/></p>
-      <Suspense fallback={<div>Loading...</div>}><Delay/></Suspense>
+    <BufferDetector/>
+    <Suspense fallback={<div>Loading...</div>}><Delay/></Suspense>
   </>
 }

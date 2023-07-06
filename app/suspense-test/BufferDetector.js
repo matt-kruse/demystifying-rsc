@@ -1,5 +1,5 @@
 'use client';
-import {Suspense, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 export default ({limit=500})=>{
   const [isServer,setServer] = useState(true);
@@ -21,14 +21,12 @@ export default ({limit=500})=>{
     }
   },[]);
 
-  // This is executed the first time the component runs on the client, too
-  if (isServer) return <></>;
+  // If everything is good, render nothing
+  if (isServer || !time || time-startTime>limit) return <></>;
 
-  if (!time) {
-    return <div>Detecting streaming...</div>
-  }
-  if (time-startTime<limit) {
-    return <div>It Buffered!</div>
-  }
-  return <div>It Streamed!</div>
+  // Render a buffer error
+  return <div style={{backgroundColor:"#e0002b",color:"white",padding:"10px"}}>
+    <p>Oops! It looks like streaming data didn't work for you. This could be caused by a buffering proxy, like a content filter or a corporate firewall that scans websites. Proxies like this buffer all the content until it is done, then inspect it, rather than streaming it to you as it is sent. So RSC Streaming doesn't work and instead you just see a long delay!</p>
+    <p>Note: This could also be triggered by router or browser caching. Try reloading!</p>
+  </div>
 }
