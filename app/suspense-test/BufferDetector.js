@@ -11,9 +11,14 @@ export default ({limit=500})=>{
     window.BUFFER_DETECT_START = Date.now();
     setServer(false);
     // Listen for the document ready event, meaning streaming has stopped
-    addEventListener('DOMContentLoaded',()=>{
+    if (document.readyState !== "loading") {
       setTime(Date.now());
-    })
+    }
+    else {
+      addEventListener('DOMContentLoaded', () => {
+        setTime(Date.now());
+      })
+    }
   },[]);
 
   // This is executed the first time the component runs on the client, too
