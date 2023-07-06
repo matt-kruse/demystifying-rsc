@@ -1,10 +1,12 @@
 import {Suspense} from "react";
 import Delay from '../Delay';
 import StreamWatcher from "./StreamWatcher";
+import BufferDetector from "@/app/BufferDetector";
 export const revalidate=0;
 
 export default async()=><>
   <h2>Streaming with Server-Side Suspense</h2>
+  <BufferDetector/>
 
   <p>It may take several reloads of this page to see what is happening!</p>
 

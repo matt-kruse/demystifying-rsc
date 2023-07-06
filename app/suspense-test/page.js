@@ -1,6 +1,6 @@
 import {Suspense} from "react";
 export const dynamic='force-dynamic';
-import BufferDetector from "@/app/suspense-test/BufferDetector";
+import BufferDetector from "@/app/BufferDetector";
 
 async function Delay() {
   return new Promise(r=>{
