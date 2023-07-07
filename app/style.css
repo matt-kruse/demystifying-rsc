@@ -2,14 +2,13 @@ html {
     background-color:#666;
 }
 body {
-    font-family:"JetBrains Mono", monospace;
+    font-family:"JetBrains Mono", "sans-serif", monospace;
     padding:15px 20px 100px 20px;
     max-width:1000px;
     margin-right:auto;
     margin-left:auto;
     background-color:#fcfcfc;
     border:1px solid #666;
-    font-size:13px;
     line-height:1.5;
 }
 img {
