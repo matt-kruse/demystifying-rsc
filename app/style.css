@@ -2,7 +2,7 @@ html {
     background-color:#666;
 }
 body {
-    font-family:"JetBrains Mono", "sans-serif", monospace;
+    font-family:"JetBrains Mono", sans-serif, monospace;
     padding:15px 20px 100px 20px;
     max-width:1000px;
     margin-right:auto;
