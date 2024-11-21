@@ -39,7 +39,6 @@ export default ()=><>
     <li>This Client Component is defined as async, so it returns a Promise and delays its content.</li>
     <li>async Client Components are only available in the canary releases of React 18 included with NextJS 13.</li>
     <li>After 3 seconds, the Promise is resolved and the Component renders its html</li>
-    <li></li>
   </ul>
   <p>Simple enough. It should be obvious what the intent is.</p>
 
